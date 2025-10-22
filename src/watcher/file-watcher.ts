@@ -1,7 +1,6 @@
 /**
  * File Watching Module
  * Manages file watching for markdown files and TypeScript source code
- * Refactoring: Extract Class + Observer Pattern
  */
 
 import chokidar, { type FSWatcher } from "chokidar";
@@ -59,7 +58,6 @@ export class ClientManager {
 
 /**
  * Manages TypeScript rebuild process
- * Refactoring: Extract Class to encapsulate rebuild state and logic
  */
 class TypeScriptRebuilder {
   private isRebuilding = false;
@@ -103,7 +101,6 @@ class TypeScriptRebuilder {
 
 /**
  * File Watcher that manages both markdown and source code watching
- * Refactoring: Facade Pattern to simplify file watching setup
  */
 export class FileWatcher {
   private clientManager: ClientManager;

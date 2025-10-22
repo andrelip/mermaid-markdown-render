@@ -1,7 +1,6 @@
 /**
  * HTML Template Generator
  * Responsible for generating the complete HTML page with embedded styles
- * Refactoring: Extract Function + Composed Method pattern
  */
 
 import { UI_STRINGS } from "../config";

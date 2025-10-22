@@ -1,11 +1,6 @@
 /**
  * Markdown Preview Server
  * Main entry point - orchestrates all modules
- *
- * Refactoring Applied:
- * - Composed Method: High-level orchestration with well-named functions
- * - Separation of Concerns: Each module has a single responsibility
- * - Dependency Injection: Modules are loosely coupled
  */
 
 import express from "express";
@@ -52,7 +47,6 @@ function getMarkdownFilePath(): string {
 
 /**
  * Loads and parses markdown file to HTML
- * Refactoring: Separate Query from Modifier
  */
 function loadMarkdown(filePath: string): string {
   try {
@@ -67,7 +61,6 @@ function loadMarkdown(filePath: string): string {
 
 /**
  * Configures Express application with middleware and routes
- * Refactoring: Extract Function to clarify setup steps
  */
 function configureExpressApp(): express.Application {
   const app = express();
@@ -95,7 +88,6 @@ function configureExpressApp(): express.Application {
 
 /**
  * Sets up application routes
- * Refactoring: Extract Function for better readability
  */
 function setupRoutes(app: express.Application): void {
   // Main route - serve rendered markdown
@@ -138,7 +130,6 @@ function setupFileWatching(markdownFilePath: string, watchMode: boolean): void {
 
 /**
  * Prints server startup information to console
- * Refactoring: Extract Function to reduce complexity
  */
 function printServerInfo(
   url: string,
@@ -169,7 +160,6 @@ function printServerInfo(
 
 /**
  * Main application entry point
- * Refactoring: Composed Method - clear sequence of high-level steps
  */
 async function main(): Promise<void> {
   // 1. Configure markdown parser

@@ -1,7 +1,6 @@
 /**
  * Application configuration
  * Centralizes all magic numbers and string constants
- * Refactoring: Replace Magic Number with Symbolic Constant
  */
 
 export const SERVER_CONFIG = {

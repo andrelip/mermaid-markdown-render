@@ -1,7 +1,6 @@
 /**
  * Security Middleware
  * Handles all security headers and CSP configuration
- * Refactoring: Extract Function + Single Responsibility Principle
  */
 
 import type { Request, Response, NextFunction } from "express";

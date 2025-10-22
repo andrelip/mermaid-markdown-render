@@ -1,7 +1,6 @@
 /**
  * Markdown Renderer Configuration
  * Configures marked.js with custom rendering for code blocks and Mermaid diagrams
- * Refactoring: Extract Module + Strategy Pattern
  */
 
 import { marked } from "marked";

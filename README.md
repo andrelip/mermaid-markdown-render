@@ -1,6 +1,8 @@
-# Markdown Preview Server
+# Mermaid Markdown Preview Server
 
-A markdown preview server designed to simplify reading and presenting markdown files with Mermaid diagrams. Perfect for technical documentation, architecture diagrams, and flowcharts.
+A **very opinionated** markdown preview server designed to simplify reading and presenting markdown files with Mermaid diagrams. Perfect for technical documentation, architecture diagrams, and flowcharts.
+
+This tool makes specific choices about rendering, layout, and diagram presentation to optimize for readability and professional output.
 
 ## Why This Tool?
 
@@ -22,19 +24,42 @@ This tool was specifically created to enhance the Mermaid diagram viewing experi
 
 ## Installation
 
+### NPM (Recommended)
+
+Install globally from npm:
+
 ```bash
-npm install
+npm install -g markdown-preview-server
 ```
 
-## Build
+Then use the `markdown` command:
 
 ```bash
+markdown <path-to-markdown-file.md>
+```
+
+### From Source
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/andrelip/mermaid-markdown-render.git
+cd mermaid-markdown-render
+npm install
 npm run build
 ```
 
 ## Usage
 
 ### Basic Usage
+
+If installed via npm:
+
+```bash
+markdown <path-to-markdown-file.md>
+```
+
+If running from source:
 
 ```bash
 npm start <path-to-markdown-file.md>
@@ -43,7 +68,7 @@ npm start <path-to-markdown-file.md>
 Example:
 
 ```bash
-npm start example.md
+markdown example.md
 ```
 
 The server will:
@@ -79,13 +104,17 @@ The server watches for changes and automatically updates the preview!
 ### Standard Mode
 
 ```bash
+markdown <path-to-markdown-file.md>
+# or from source:
 npm start <path-to-markdown-file.md>
 ```
 
 - **Markdown file**: Changes are automatically detected and the preview updates instantly
 - **Source code files**: Not watched
 
-### Watch Mode (Development)
+### Watch Mode (Development - Source Only)
+
+For development on the tool itself:
 
 ```bash
 npm run watch <path-to-markdown-file.md>
